@@ -1,0 +1,565 @@
+/* ================= ROOT VARIABLE ================= */
+
+:root {
+  --aside-bg: #1a1a2e; /* fixed form background for both themes */
+}
+
+/* PAGE */
+
+.page {
+  /* border: 1px solid red; */
+  font-family: var(--poppins);
+  padding: 15px;
+}
+
+/* TOP BAR */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h2 {
+  font-family: var(--DM);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+/* ================= HEADER SEARCH ================= */
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 280px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-family: var(--poppins);
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.page-title {
+  font-family: var(--DM);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* BUTTONS */
+
+.add-btn {
+  background: var(--accent-color);
+  border: none;
+  padding: 10px 14px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.open-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= MODAL ================= */
+
+.modals-form {
+  width: 600px;
+  background: var(--aside-bg); /* FIXED background */
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Larger modal */
+
+.large-modal {
+  width: 820px;
+  background: var(--aside-bg); /* SAME for both themes */
+  color: var(--text-primary);
+}
+
+/* HEADER */
+
+.modals-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #374151;
+}
+
+.modals-header h3 {
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-inverse);
+}
+
+.modals-header span {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-inverse);
+  font-weight: 600;
+}
+
+/* BODY */
+
+.modals-body {
+  padding: 15px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+  margin: 15px 0 10px;
+  font-size: 13px;
+  color: #93c5fd;
+  border-bottom: 1px solid #374151;
+  font-family: var(--montserrat);
+  padding-bottom: 5px;
+}
+
+/* GRID LAYOUTS */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #374151;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  font-family: var(--roboto);
+}
+.field select option {
+  background: var(--aside-bg);
+  color: white;
+}
+textarea {
+  min-height: 80px;
+}
+
+/* STATUS CHIPS */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border: 1px solid #374151;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--montserrat);
+}
+
+/* ACTIVE STATUS */
+
+.active-chip {
+  background: var(--accent-color);
+  border: none;
+}
+
+.upload-box p {
+  margin: 0;
+  font-weight: bold;
+  font-family: var(--poppins);
+}
+
+.upload-box span {
+  font-size: 12px;
+  color: #9ca3af;
+  font-family: var(--roboto);
+}
+
+/* FOOTER */
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #374151;
+}
+
+.cancel {
+  background: transparent;
+  border: 1px solid #374151;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.save {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* BUTTON FONT STANDARDIZATION */
+
+.add-btn,
+.open-btn,
+.save,
+.cancel,
+.chip {
+  font-family: var(--poppins);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* CENTER CONTENT */
+
+.center-container {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.center-title {
+  font-family: var(--DM);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text-primary);
+}
+
+.center-btn {
+  padding: 12px 18px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+/* ================= CHECKBOX ALIGNMENT ================= */
+
+.checkbox-field {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Checkbox row */
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--montserrat);
+  font-size: 13px;
+  color: #e5e7eb;
+  cursor: pointer;
+  margin: 30px 0 0 10px;
+}
+
+/* Checkbox size */
+
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ================= FIELD + LABEL ================= */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+/* LABEL STYLE */
+
+.field label {
+  font-size: 12px;
+  font-family: var(--montserrat);
+  color: #cbd5e1;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.field label.required::after {
+  content: " *";
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.card-container {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 cards per row */
+  gap: 45px;
+  margin-top: 40px;
+}
+
+.file-list {
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.file-item {
+  font-size: 12px;
+  margin: 4px 0;
+  color: var(--text-inverse);
+  font-family: var(--DM);
+}
+
+/* ================= CHECKBOX FIX ================= */
+
+.fields label {
+  display: flex;
+  align-items: center;
+  gap: 10px;          /* IMPORTANT: spacing between checkbox and text */
+  cursor: pointer;
+  font-family: var(--montserrat);
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+/* remove default checkbox spacing issues */
+.fields input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--accent-color); /* optional nice UI */
+}
+
+/* container alignment fix */
+.fields {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+/* --------media query------- */
+
+/* -------tab view-------- */
+@media all and (max-width: 768px) {
+  /* PAGE */
+  .page {
+    padding: 12px;
+  }
+
+  /* HEADER */
+  .header-row,
+  .top-bar {
+    /* flex-direction: column; */
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  /* SEARCH */
+  .search-box,
+  .search-input {
+    width: 100%;
+  }
+
+  /* BUTTON */
+  .add-btn,
+  .open-btn {
+    width: fit-content;
+  }
+
+  /* CARD GRID */
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* MODAL */
+  .modals-form {
+    width: 90%;
+  }
+
+  .large-modal {
+    width: 95%;
+  }
+
+  /* FORM GRID */
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* TEXT */
+  .page-title,
+  .top-bar h2 {
+    font-size: 20px;
+  }
+
+  .center-title {
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  .modal-footer {
+    flex-wrap: wrap;
+  }
+}
+
+/* -------mobile view-------- */
+@media all and (max-width: 576px) {
+  /* PAGE */
+  .page {
+    padding: 10px;
+  }
+
+  /* HEADER */
+  .header-row,
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* SEARCH */
+  .search-box,
+  .search-input {
+    width: 100%;
+  }
+
+  /* BUTTONS */
+  .add-btn,
+  .open-btn {
+    width: auto;
+    width: 120px;
+    padding: 10px 14px;
+  }
+
+  /* CARD GRID */
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  /* MODAL */
+  .modals-form,
+  .large-modal {
+    width: 95%;
+    border-radius: 10px;
+  }
+
+  .modals-body {
+    padding: 12px;
+    max-height: 65vh;
+  }
+
+  /* FORM GRID */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* INPUT */
+  input,
+  select,
+  textarea {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  /* TITLES */
+  .page-title,
+  .top-bar h2 {
+    font-size: 18px;
+  }
+
+  .center-title {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 12px;
+  }
+
+  /* CHECKBOX */
+  .checkbox-row {
+    margin: 15px 0 0 5px;
+    font-size: 12px;
+  }
+
+  .fields label {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  .modal-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .save,
+  .cancel {
+    width: 100%;
+  }
+}

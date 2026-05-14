@@ -1,0 +1,90 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+  width: 600px;
+  background: var(--aside-bg); /* FIXED background */
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Larger modal */
+
+.large-modal {
+  width: 820px;
+  background: var(--aside-bg); /* SAME for both themes */
+  color: var(--text-primary);
+}
+
+/* HEADER */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #374151;
+}
+
+.modal-header h3 {
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-inverse);
+}
+
+.modal-header span {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-inverse);
+  font-weight: 600;
+}
+
+/* BODY */
+
+.modal-body {
+  padding: 15px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+
+/* Container for plot list */
+.plot-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+/* Each checkbox row */
+.plot-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* Checkbox size */
+.plot-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Label text */
+.plot-item span {
+  font-size: 14px;
+}

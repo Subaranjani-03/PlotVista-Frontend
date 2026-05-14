@@ -1,0 +1,166 @@
+/* ================= USER CARD ================= */
+
+.user-card {
+  /* Card should be WHITE in both themes */
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+  /* FONT */
+  font-family: var(--poppins);
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  background: #ffffff; /* keep white on hover */
+}
+
+/* ================= PROFILE ================= */
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--accent-color);
+}
+
+.user-id {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 2px 0 6px 0;
+}
+
+/* ================= STATUS ================= */
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--poppins);
+}
+
+/* Active */
+
+.status-badge.active {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Blocked */
+
+.status-badge.inactive {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* ================= DETAILS ================= */
+
+.details p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: var(--aside-bg);
+  font-family: var(--poppins);
+}
+.details p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: var(--aside-bg);
+  font-family: var(--poppins);
+
+  display: flex;
+  align-items: center;
+  gap: 8px; /* controls space between icon and text */
+}
+
+/* ICON STYLE */
+
+.details p i {
+  font-size: 14px;
+  color: var(--aside-bg);
+}
+
+/* ================= LINE ================= */
+
+hr {
+  margin: 14px 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ================= BUTTONS ================= */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  /* border: 1px solid red; */
+}
+.icon-btn {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border-color);
+
+  background: var(--hover-bg);
+
+  color: var(--icon-color);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+}
+/* EDIT BUTTON */
+
+.edit-btn:hover {
+  background: var(--accent-color);
+  color: var(--text-inverse);
+}
+
+/* DELETE BUTTON */
+
+.delete-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #ef4444;
+  color: var(--text-inverse);
+  cursor: pointer;
+  font-weight: 500;
+  font-family: var(--poppins);
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.card-actions button {
+  margin: 5px;
+}
+
+.assign-btn {
+  background-color: #4CAF50;
+  color: white;
+}

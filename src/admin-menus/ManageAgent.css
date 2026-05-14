@@ -1,0 +1,236 @@
+/* ================= MANAGE AGENT PAGE ================= */
+
+.page {
+  padding: 20px;
+  font-family: Poppins, sans-serif;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* HEADER ROW */
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ================= POPUP ================= */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+
+.popup {
+  width: 500px;
+  height: 300px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  position: relative;
+  padding: 20px;
+}
+
+/* Modal body */
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--DM);
+}
+
+/* Form group */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+}
+
+/* Inputs */
+
+.modal-body input,
+.modal-body select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.modal-body select option {
+  background-color: var(--aside-bg);
+}
+
+.modal-body input:focus,
+.modal-body select:focus {
+  border: 1px solid #ccc;
+}
+
+/* Footer */
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+/* Button */
+
+.update-btn {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= TABLET VIEW ================= */
+
+@media all and (max-width: 768px) {
+  .page {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  /* Header */
+
+  .header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  /* Grid */
+
+  .agent-grid,
+  .user-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Popup */
+
+  .popup {
+    width: 90%;
+    height: auto;
+    padding: 18px;
+  }
+
+  .modal-body {
+    gap: 10px;
+  }
+
+  .modal-footer {
+    padding-top: 12px;
+  }
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media all and (max-width: 576px) {
+  .page {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  /* Header */
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Search */
+
+  .header-row input {
+    width: 100%;
+  }
+
+  /* Add button */
+
+  .add-btn {
+    width: auto;
+    min-width: 140px;
+    padding: 10px 16px;
+  }
+
+  /* Grid */
+
+  .agent-grid,
+  .user-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Popup */
+
+  .popup {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .modal-body {
+    gap: 8px;
+  }
+
+  .modal-body input,
+  .modal-body select {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .modal-footer {
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .update-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}

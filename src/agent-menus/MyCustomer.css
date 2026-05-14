@@ -1,0 +1,49 @@
+/* ================= MY CUSTOMER PAGE ================= */
+
+.page {
+  padding: 20px;
+  background: var(--right-bg);
+  min-height: 100vh;
+}
+
+/* PAGE TITLE */
+
+.title {
+  font-family: var(--DM);
+  font-size: 22px;
+  font-weight: 600;
+
+  color: var(--text-primary);
+
+  margin-bottom: 20px;
+}
+
+/* ================= GRID ================= */
+
+.customer-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .customer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .customer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .customer-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,431 @@
+/* FULL PAGE CENTER */
+.profile-page {
+  height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: var(--DM);
+}
+
+/* CARD */
+.profile-card {
+    /* border: 1px solid red; */
+  width: 700px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* LEFT SIDE */
+.profile-left {
+  width: 40%;
+  background: linear-gradient(135deg, #0f172a, #1a1a2e);
+  color: var(--text-inverse);
+  text-align: center;
+  padding: 70px 20px;
+}
+
+/* AVATAR */
+.Uavatar {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-family: var(--montserrat);
+  font-weight: 600;
+}
+
+/* NAME */
+.uname {
+  font-family: var(--DM);
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/* EMAIL */
+.Uemail {
+  font-family: var(--DM);
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+/* BADGES */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: var(--accent-color);
+  color: #fff;
+  font-family: var(--roboto);
+  font-weight: 500;
+}
+
+/* RIGHT SIDE */
+.profile-right {
+  width: 60%;
+  padding: 25px;
+  font-family: var(--DM);
+  background: white;
+}
+
+/* TOP HEADER */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top h4 {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-family: var(--poppins);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* BUTTON */
+.edit-btn {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--roboto);
+  font-weight: 500;
+}
+
+/* GRID */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.info-grid .full {
+  grid-column: span 2;
+}
+
+/* LABEL */
+.label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-family: var(--montserrat);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* VALUES */
+.info-grid p,
+.agent-Ugrid p {
+  font-family: var(--DM);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 2px 0;
+}
+
+/* AGENT BOX */
+.agent-Ubox {
+  margin-top: 25px;
+}
+
+.agent-Ubox h4 {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-family: var(--poppins);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* AGENT GRID */
+.agent-Ugrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.agent-Ugrid .full {
+  grid-column: span 2;
+}
+
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MODAL */
+.modal-box {
+  width: 420px;
+  background: linear-gradient(135deg, #111827, #1a1a2e);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  color: var(--text-inverse);
+}
+
+/* HEADER */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  
+}
+
+.modal-header h3 {
+  font-family: var(--poppins);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-header span {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* BODY */
+.modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* LABEL */
+.form-group label {
+  font-size: 12px;
+  font-family: var(--montserrat);
+  color: #cbd5e1; /* soft readable color on dark bg */
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+/* INPUTS */
+.modal-body input,
+.modal-body textarea {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #374151;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  font-family: var(--roboto);
+}
+
+.modal-body input::placeholder,
+.modal-body textarea::placeholder {
+  color: #9ca3af;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px var(--accent-color);
+}
+
+/* FOOTER */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* BUTTONS */
+.save-btn {
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-btns {
+  background: #374151;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* ------- TABLET VIEW -------- */
+@media (max-width: 768px) {
+
+  .profile-page {
+    height: auto;
+    padding: 20px;
+  }
+
+  .profile-card {
+    width: 70%;
+    flex-direction: column; /* stack layout */
+    border-radius: 16px;
+  }
+
+  .profile-left {
+    width: 100%;
+    padding: 50px 20px;
+  }
+
+  .profile-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .Uavatar {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .uname {
+    font-size: 22px;
+  }
+
+  .Uemail {
+    font-size: 13px;
+  }
+
+  .badges {
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-size: 11px;
+  }
+
+  .top h4 {
+    font-size: 12px;
+  }
+
+  .edit-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .agent-Ugrid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid .full,
+  .agent-Ugrid .full {
+    grid-column: span 1;
+  }
+
+  .modal-box {
+    width: 85%;
+  }
+}
+
+/* ------- MOBILE VIEW -------- */
+@media (max-width: 576px) {
+
+  .profile-page {
+    height: auto;
+    padding: 15px;
+  }
+
+  .profile-card {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  .profile-left {
+    padding: 30px 15px;
+  }
+
+  .Uavatar {
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .uname {
+    font-size: 20px;
+  }
+
+  .Uemail {
+    font-size: 13px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .profile-right {
+    padding: 15px;
+  }
+
+  .top h4 {
+    font-size: 12px;
+  }
+
+  .edit-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .info-grid p,
+  .agent-Ugrid p {
+    font-size: 13px;
+  }
+
+  .modal-box {
+    width: 95%;
+    border-radius: 12px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .save-btn,
+  .cancel-btns {
+    width: 100%;
+  }
+}
+
+

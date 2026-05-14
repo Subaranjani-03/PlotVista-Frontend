@@ -1,0 +1,23 @@
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.download-btn {
+  background: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+
+.cancel {
+ background: transparent;
+  border: 1px solid #374151;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
