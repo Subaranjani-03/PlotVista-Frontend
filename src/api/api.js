@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export const BASE_URL = "https://plotvista-backend-7k5o.onrender.com";
 
 export const apiRequest = async (
@@ -11,19 +9,28 @@ export const apiRequest = async (
   try {
     const token = localStorage.getItem("token");
 
-    const config = {
+    const options = {
       method,
-      url: `${BASE_URL}${endpoint}`,
       headers: {
         Authorization: token ? `Bearer ${token}` : "",
-        ...(isFormData ? {} : { "Content-Type": "application/json" }),
       },
-      data: body ? body : undefined,
     };
 
-    const res = await axios(config);
+    // ADD CONTENT-TYPE ONLY FOR JSON
+    if (!isFormData) {
+      options.headers["Content-Type"] = "application/json";
+    }
 
-    return res.data;
+    // ADD BODY
+    if (body) {
+      options.body = isFormData ? body : JSON.stringify(body);
+    }
+
+    const response = await fetch(`${BASE_URL}${endpoint}`, options);
+
+    const data = await response.json();
+
+    return data;
   } catch (error) {
     console.error(error);
 
