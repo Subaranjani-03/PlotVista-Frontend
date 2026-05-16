@@ -514,6 +514,16 @@
   cursor: not-allowed;
 }
 
+.agent-phone {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.disabled-payment {
+  opacity: 0.5;
+  filter: blur(0.5px);
+  cursor: not-allowed;
+}
 /* CANCELLED BOOKING CARD */
 
 .cancelled-card {
@@ -523,8 +533,6 @@
   position: relative;
   transition: 0.3s ease;
 }
-
-
 
 /* ================= TABLET VIEW ================= */
 

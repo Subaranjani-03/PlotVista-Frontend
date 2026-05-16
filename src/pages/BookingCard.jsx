@@ -180,6 +180,20 @@ const BookingCard = ({
             <div className="price">₹ {plot?.totalPrice}</div>
           </div>
 
+          {/* AGENT PHONE FOR USER */}
+
+          {role === "user" && item.assignedAgent?.phone && (
+            <div className="info-row">
+              <div className="left-info">
+                <i className="fa-solid fa-phone"></i>
+
+                <span className="agent-phone">
+                  Agent Contact : {item.assignedAgent.phone}
+                </span>
+              </div>
+            </div>
+          )}
+
           {/* LOCATION */}
 
           <div className="info-row">
@@ -395,19 +409,32 @@ const BookingCard = ({
             {/* PAYMENT BUTTON */}
 
             {item.status !== "Cancelled" && (
-              <button
-                className="assign-btn"
-                disabled={item.paymentStatus === "Paid"}
-                onClick={() => {
-                  if (item.paymentStatus !== "Paid") {
-                    setShowPaymentModal(true);
+              <div className="payment-wrapper">
+                <button
+                  className={`assign-btn ${
+                    item.status !== "Confirmed" || item.paymentStatus === "Paid"
+                      ? "disabled-payment"
+                      : ""
+                  }`}
+                  disabled={
+                    item.paymentStatus === "Paid" || item.status !== "Confirmed"
                   }
-                }}
-              >
-                {item.paymentStatus === "Paid"
-                  ? "Payment Completed"
-                  : "Make Payment"}
-              </button>
+                  onClick={() => {
+                    if (
+                      item.paymentStatus !== "Paid" &&
+                      item.status === "Confirmed"
+                    ) {
+                      setShowPaymentModal(true);
+                    }
+                  }}
+                >
+                  {item.paymentStatus === "Paid"
+                    ? "Payment Completed"
+                    : item.status === "Confirmed"
+                      ? "Make Payment"
+                      : "Make Payment"}
+                </button>
+              </div>
             )}
 
             {/* CANCEL BUTTON */}
